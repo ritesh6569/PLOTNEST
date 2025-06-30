@@ -12,7 +12,7 @@ export default function PlotMarket() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/plots').then(res => {
+    axios.get('https://plotnest.onrender.com/api/plots').then(res => {
       setPlots(res.data);
       setLoading(false);
     }).catch(err => {
@@ -30,7 +30,7 @@ export default function PlotMarket() {
       return demoImage;
     }
     if (plot.image && plot.image.startsWith('/uploads/')) {
-      const imageUrl = `http://localhost:5000${plot.image}`;
+      const imageUrl = `https://plotnest.onrender.com${plot.image}`;
       return imageUrl;
     }
     if (plot.image && plot.image.startsWith('http')) {

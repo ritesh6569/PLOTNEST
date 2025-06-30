@@ -75,10 +75,10 @@ export default function SellerDashboard() {
       setError('');
       
       const [plotsRes, inquiriesRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/plots/seller/my-plots', {
+        axios.get('https://plotnest.onrender.com/api/plots/seller/my-plots', {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        axios.get('http://localhost:5000/api/inquiries/seller', {
+        axios.get('https://plotnest.onrender.com/api/inquiries/seller', {
           headers: { Authorization: `Bearer ${token}` }
         }).catch(() => ({ data: [] })) // If inquiries endpoint doesn't exist, use empty array
       ]);
@@ -110,7 +110,7 @@ export default function SellerDashboard() {
     if (!window.confirm('Are you sure you want to delete this plot?')) return;
     
     try {
-      await axios.delete(`http://localhost:5000/api/plots/seller/${plotId}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/plots/seller/${plotId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -245,7 +245,7 @@ export default function SellerDashboard() {
                       </div>
                     )}
                     <img 
-                      src={plot.image && plot.image.startsWith('/uploads/') ? `http://localhost:5000${plot.image}` : (plot.image || 'https://via.placeholder.com/300x200?text=No+Image')} 
+                      src={plot.image && plot.image.startsWith('/uploads/') ? `https://plotnest.onrender.com${plot.image}` : (plot.image || 'https://via.placeholder.com/300x200?text=No+Image')} 
                       alt={plot.title} 
                       className="w-full h-32 object-cover rounded mb-3" 
                     />

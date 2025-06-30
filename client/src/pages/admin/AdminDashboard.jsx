@@ -102,16 +102,16 @@ export default function AdminDashboard() {
       setLoading(true);
       
         const [usersRes, plotsRes, inquiriesRes, bookingsRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/admin/users', { 
+        axios.get('https://plotnest.onrender.com/api/admin/users', { 
           headers: { Authorization: `Bearer ${token}` } 
         }),
-        axios.get('http://localhost:5000/api/plots', { 
+        axios.get('https://plotnest.onrender.com/api/plots', { 
           headers: { Authorization: `Bearer ${token}` } 
         }),
-        axios.get('http://localhost:5000/api/inquiries', { 
+        axios.get('https://plotnest.onrender.com/api/inquiries', { 
           headers: { Authorization: `Bearer ${token}` } 
         }),
-        axios.get('http://localhost:5000/api/bookings', { 
+        axios.get('https://plotnest.onrender.com/api/bookings', { 
           headers: { Authorization: `Bearer ${token}` } 
         })
       ]);
@@ -167,7 +167,7 @@ export default function AdminDashboard() {
   const deleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/admin/users/${userId}`, {
+        await axios.delete(`https://plotnest.onrender.com/api/admin/users/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         fetchAllData(); // Refresh data
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
   const handleEditUserSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/admin/users/${editUser._id}`, editUser, {
+      await axios.put(`https://plotnest.onrender.com/api/admin/users/${editUser._id}`, editUser, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEditUserModal(false);
@@ -215,7 +215,7 @@ export default function AdminDashboard() {
   const deletePlot = async (plotId) => {
     if (!window.confirm('Are you sure you want to delete this plot?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/plots/${plotId}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/plots/${plotId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchAllData();
@@ -226,7 +226,7 @@ export default function AdminDashboard() {
 
   const handleViewPlotDetails = async (plotId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/plots/${plotId}`);
+      const res = await axios.get(`https://plotnest.onrender.com/api/plots/${plotId}`);
       setPlotDetails(res.data);
       setPlotDetailsModal(true);
     } catch {
@@ -250,7 +250,7 @@ export default function AdminDashboard() {
   const deleteInquiry = async (inquiryId) => {
     if (!window.confirm('Are you sure you want to delete this inquiry?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/inquiries/${inquiryId}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/inquiries/${inquiryId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchAllData();
@@ -715,7 +715,7 @@ export default function AdminDashboard() {
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-lg relative">
               <button className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-gray-700" onClick={() => setPlotDetailsModal(false)}>×</button>
               <h2 className="text-2xl font-bold text-blue-800 mb-4">Plot Details</h2>
-              <img src={plotDetails.image && plotDetails.image.startsWith('/uploads/') ? `http://localhost:5000${plotDetails.image}` : (plotDetails.image || 'https://via.placeholder.com/600x400?text=No+Image')} alt={plotDetails.title} className="rounded-lg shadow w-full h-64 object-cover mb-4" />
+              <img src={plotDetails.image && plotDetails.image.startsWith('/uploads/') ? `https://plotnest.onrender.com${plotDetails.image}` : (plotDetails.image || 'https://via.placeholder.com/600x400?text=No+Image')} alt={plotDetails.title} className="rounded-lg shadow w-full h-64 object-cover mb-4" />
               <div className="mb-2"><strong>Title:</strong> {plotDetails.title}</div>
               <div className="mb-2"><strong>Location:</strong> {plotDetails.location}</div>
               <div className="mb-2"><strong>Price:</strong> ₹{plotDetails.price?.toLocaleString()}</div>

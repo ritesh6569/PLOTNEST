@@ -12,7 +12,7 @@ export default function DealerInquiries() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/inquiries')
+    axios.get('https://plotnest.onrender.com/api/inquiries')
       .then(res => {
         if (Array.isArray(res.data) && res.data.length > 0) {
           setInquiries(res.data.map((i, idx) => ({

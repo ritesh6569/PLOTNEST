@@ -13,7 +13,7 @@ export default function ManageInquiries() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    axios.get('http://localhost:5000/api/inquiries', {
+    axios.get('https://plotnest.onrender.com/api/inquiries', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setInquiries(res.data))
@@ -32,7 +32,7 @@ export default function ManageInquiries() {
     if (!window.confirm('Are you sure you want to delete this inquiry?')) return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5000/api/inquiries/${id}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/inquiries/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setInquiries(inquiries.filter(i => i._id !== id));

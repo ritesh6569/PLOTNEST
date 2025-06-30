@@ -56,7 +56,7 @@ export default function BrowsePlots() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    fetch('http://localhost:5000/api/plots')
+    fetch('https://plotnest.onrender.com/api/plots')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
@@ -111,7 +111,7 @@ export default function BrowsePlots() {
       return 'https://images.unsplash.com/photo-1506744038136-46273834b3fb';
     }
     if (plot.image && plot.image.startsWith('/uploads/')) {
-      return `http://localhost:5000${plot.image}`;
+      return `https://plotnest.onrender.com${plot.image}`;
     }
     if (plot.image && plot.image.startsWith('http')) {
       return plot.image;
@@ -134,7 +134,7 @@ export default function BrowsePlots() {
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/bookings', {
+      await axios.post('https://plotnest.onrender.com/api/bookings', {
         ...bookingForm,
         plotId: bookingModal.plot._id,
         plotTitle: bookingModal.plot.title,

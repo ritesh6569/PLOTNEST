@@ -19,7 +19,7 @@ export default function PlotDetails() {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5000/api/plots/${id}`)
+    axios.get(`https://plotnest.onrender.com/api/plots/${id}`)
       .then(res => {
         setPlot(res.data);
         setError('');
@@ -45,7 +45,7 @@ export default function PlotDetails() {
     e.preventDefault();
     setFormStatus({ loading: true, error: '', success: '' });
     try {
-      await axios.post('http://localhost:5000/api/bookings', {
+      await axios.post('https://plotnest.onrender.com/api/bookings', {
         ...form,
         plotId: plot._id,
         plotTitle: plot.title,
@@ -68,7 +68,7 @@ export default function PlotDetails() {
     setSubmitting(true);
     setInquiryStatus('');
     try {
-      const res = await fetch('http://localhost:5000/api/inquiries', {
+      const res = await fetch('https://plotnest.onrender.com/api/inquiries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...inquiryForm, plot: plot.title, plotId: plot._id })
@@ -94,7 +94,7 @@ export default function PlotDetails() {
         <button onClick={() => navigate(-1)} className="flex items-center text-blue-600 hover:underline mb-4"><FaArrowLeft className="mr-2" /> Back to Plots</button>
         <div className="flex flex-col md:flex-row gap-8">
           <img
-            src={plot.image && plot.image.startsWith('/uploads/') ? `http://localhost:5000${plot.image}` : (plot.image || 'https://via.placeholder.com/600x400?text=No+Image')}
+            src={plot.image && plot.image.startsWith('/uploads/') ? `https://plotnest.onrender.com${plot.image}` : (plot.image || 'https://via.placeholder.com/600x400?text=No+Image')}
             alt={plot.title}
             className="rounded-lg shadow w-full md:w-2/3 h-64 md:h-80 object-cover mb-4 md:mb-0"
             onError={e => { e.target.onerror = null; e.target.src = 'https://via.placeholder.com/600x400?text=No+Image'; }}

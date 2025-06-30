@@ -13,7 +13,7 @@ export default function ManageBookings() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    axios.get('http://localhost:5000/api/bookings', {
+    axios.get('https://plotnest.onrender.com/api/bookings', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setBookings(res.data))
@@ -32,7 +32,7 @@ export default function ManageBookings() {
     if (!window.confirm('Are you sure you want to delete this booking?')) return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/${id}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/bookings/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setBookings(bookings.filter(b => b._id !== id));

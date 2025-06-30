@@ -13,7 +13,7 @@ export default function ManagePlots() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    axios.get('http://localhost:5000/api/plots', {
+    axios.get('https://plotnest.onrender.com/api/plots', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setPlots(res.data))
@@ -32,7 +32,7 @@ export default function ManagePlots() {
     if (!window.confirm('Are you sure you want to delete this plot?')) return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5000/api/plots/${id}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/plots/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPlots(plots.filter(p => p._id !== id));

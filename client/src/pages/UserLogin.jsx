@@ -50,7 +50,7 @@ export default function UserLogin() {
     
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      const res = await axios.post('https://plotnest.onrender.com/api/auth/login', form);
       localStorage.setItem('userToken', res.data.token);
       localStorage.setItem('userInfo', JSON.stringify(res.data.user));
       if (res.data.user.role === 'buyer') {

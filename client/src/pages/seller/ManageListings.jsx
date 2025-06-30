@@ -22,7 +22,7 @@ export default function ManageListings() {
       setLoading(true);
       setError('');
       
-      const response = await axios.get('http://localhost:5000/api/plots/seller/my-plots', {
+      const response = await axios.get('https://plotnest.onrender.com/api/plots/seller/my-plots', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -49,7 +49,7 @@ export default function ManageListings() {
     
     setDeleting(plotId);
     try {
-      await axios.delete(`http://localhost:5000/api/plots/seller/${plotId}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/plots/seller/${plotId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       

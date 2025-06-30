@@ -31,7 +31,7 @@ export default function DealerDashboard() {
   const dealerId = dealer?._id || 'dummyDealerId'; // Replace with real dealer ID logic
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/plots/dealer/stats')
+    axios.get('https://plotnest.onrender.com/api/plots/dealer/stats')
       .then(res => {
         setStats({
           matches: res.data.matches,

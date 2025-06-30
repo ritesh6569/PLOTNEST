@@ -12,7 +12,7 @@ export default function DealerBrowsePlots() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    axios.get('http://localhost:5000/api/plots')
+    axios.get('https://plotnest.onrender.com/api/plots')
       .then(res => {
         if (Array.isArray(res.data) && res.data.length > 0) {
           setPlots(res.data);
@@ -57,7 +57,7 @@ export default function DealerBrowsePlots() {
                     plot.image && (plot.image.startsWith('http://') || plot.image.startsWith('https://'))
                       ? plot.image
                       : plot.image && plot.image.startsWith('/uploads/')
-                        ? `http://localhost:5000${plot.image}`
+                        ? `https://plotnest.onrender.com${plot.image}`
                         : 'https://via.placeholder.com/300x200?text=No+Image'
                   }
                   alt={plot.title}

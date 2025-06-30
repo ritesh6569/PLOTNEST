@@ -23,7 +23,7 @@ export default function ManageUsers() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    axios.get('http://localhost:5000/api/admin/users', {
+    axios.get('https://plotnest.onrender.com/api/admin/users', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setUsers(res.data))
@@ -32,7 +32,7 @@ export default function ManageUsers() {
   }, [token]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/admin/exists').then(res => {
+    axios.get('https://plotnest.onrender.com/api/admin/exists').then(res => {
       setAdminExists(res.data.exists);
     });
   }, []);
@@ -47,7 +47,7 @@ export default function ManageUsers() {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
     setDeleting(id);
     try {
-      await axios.delete(`http://localhost:5000/api/admin/users/${id}`, {
+      await axios.delete(`https://plotnest.onrender.com/api/admin/users/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(users.filter(u => u._id !== id));

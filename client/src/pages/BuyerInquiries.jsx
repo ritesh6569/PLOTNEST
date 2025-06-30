@@ -22,7 +22,7 @@ export default function BuyerInquiries() {
       setLoading(false);
       return;
     }
-    fetch('http://localhost:5000/api/inquiries', {
+    fetch('https://plotnest.onrender.com/api/inquiries', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())

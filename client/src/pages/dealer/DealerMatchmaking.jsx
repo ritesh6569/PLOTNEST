@@ -19,8 +19,8 @@ export default function DealerMatchmaking() {
 
   useEffect(() => {
     Promise.all([
-      axios.get('http://localhost:5000/api/admin/users'),
-      axios.get('http://localhost:5000/api/plots')
+      axios.get('https://plotnest.onrender.com/api/admin/users'),
+      axios.get('https://plotnest.onrender.com/api/plots')
     ])
       .then(([usersRes, plotsRes]) => {
         const users = usersRes.data || [];

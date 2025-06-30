@@ -49,7 +49,7 @@ export default function UserRegister() {
     }
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post('https://plotnest.onrender.com/api/auth/register', {
         username: form.username,
         email: form.email,
         password: form.password,

@@ -12,7 +12,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(' http://localhost:5000/api/admin/register', { username, password });
+      await axios.post(' https://plotnest.onrender.com/api/admin/register', { username, password });
       setMessage('Admin registered! You can now log in.');
       setTimeout(() => navigate('/admin/login'), 1500);
     } catch (err) {

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { io } from 'socket.io-client';
 import axios from 'axios';
 
-const socket = io('http://localhost:5000'); // Adjust if needed
+const socket = io('https://plotnest.onrender.com'); // Adjust if needed
 
 export default function DealChat({ dealId, userId, username }) {
   const [messages, setMessages] = useState([]);
@@ -14,7 +14,7 @@ export default function DealChat({ dealId, userId, username }) {
     socket.emit('joinDeal', dealId);
 
     // Fetch existing messages
-    axios.get(`http://localhost:5000/api/messages/${dealId}`)
+    axios.get(`https://plotnest.onrender.com/api/messages/${dealId}`)
       .then(res => setMessages(res.data));
 
     // Listen for new messages
@@ -40,7 +40,7 @@ export default function DealChat({ dealId, userId, username }) {
       text
     };
     // Save to DB
-    const res = await axios.post('http://localhost:5000/api/messages', message);
+    const res = await axios.post('https://plotnest.onrender.com/api/messages', message);
     // Emit to room
     socket.emit('sendMessage', { dealId, message: { ...res.data, sender: { _id: userId, username } } });
     setText('');

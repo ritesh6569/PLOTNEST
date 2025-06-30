@@ -17,7 +17,7 @@ export default function AdminLogin() {
     setError('');
     
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+      const res = await axios.post('https://plotnest.onrender.com/api/admin/login', { username, password });
       
       // Store admin token and info
       localStorage.setItem('adminToken', res.data.token);

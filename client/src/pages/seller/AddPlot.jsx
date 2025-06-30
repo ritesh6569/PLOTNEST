@@ -70,7 +70,7 @@ export default function AddPlot() {
         formData.append('image', form.image);
       }
 
-      const response = await axios.post('http://localhost:5000/api/plots/seller', formData, {
+      const response = await axios.post('https://plotnest.onrender.com/api/plots/seller', formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

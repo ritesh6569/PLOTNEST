@@ -48,13 +48,13 @@ export default function BuyerDashboard() {
       return;
     }
     Promise.all([
-      fetch('http://localhost:5000/api/inquiries', {
+      fetch('https://plotnest.onrender.com/api/inquiries', {
         headers: { Authorization: `Bearer ${token}` }
       }).then(res => res.json()).catch(() => dummyInquiries),
-      fetch('http://localhost:5000/api/bookings', {
+      fetch('https://plotnest.onrender.com/api/bookings', {
         headers: { Authorization: `Bearer ${token}` }
       }).then(res => res.json()).catch(() => dummyBookings),
-      fetch('http://localhost:5000/api/plots').then(res => res.json()).catch(() => Array(dummyNewPlots).fill({}))
+      fetch('https://plotnest.onrender.com/api/plots').then(res => res.json()).catch(() => Array(dummyNewPlots).fill({}))
     ])
       .then(([inq, book, plots]) => {
         setInquiries(Array.isArray(inq) ? inq.filter(b => b.email === user?.email) : dummyInquiries);
@@ -71,7 +71,7 @@ export default function BuyerDashboard() {
   }, [user]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/plots').then(res => setPlots(res.data));
+    axios.get('https://plotnest.onrender.com/api/plots').then(res => setPlots(res.data));
   }, []);
 
   const handleImageError = (plotId) => {
@@ -83,7 +83,7 @@ export default function BuyerDashboard() {
       return 'https://images.unsplash.com/photo-1506744038136-46273834b3fb';
     }
     if (plot.image && plot.image.startsWith('/uploads/')) {
-      return `http://localhost:5000${plot.image}`;
+      return `https://plotnest.onrender.com${plot.image}`;
     }
     if (plot.image && plot.image.startsWith('http')) {
       return plot.image;
@@ -94,7 +94,7 @@ export default function BuyerDashboard() {
   const handleInquiry = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/inquiries', { ...inquiry, type: 'plot' });
+      await axios.post('https://plotnest.onrender.com/api/inquiries', { ...inquiry, type: 'plot' });
       setMessage('Inquiry sent successfully!');
       setInquiry({ name: '', email: '', message: '' });
     } catch (err) {
@@ -117,7 +117,7 @@ export default function BuyerDashboard() {
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/bookings', {
+      await axios.post('https://plotnest.onrender.com/api/bookings', {
         ...bookingForm,
         plotId: bookingModal.plot._id,
         plotTitle: bookingModal.plot.title,
