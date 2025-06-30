@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 // Improved CORS configuration
 const corsOptions = {
-  origin: "https://plotnest.vercel.app",
+  origin: "*",
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
