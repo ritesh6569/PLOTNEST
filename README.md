@@ -38,7 +38,7 @@ Contributing
 
 📱 Responsive UI with Modern Design
 
-💬 Real-time Chat for Deals (optional, if implemented)
+💬 Real-time Chat for Deals 
 
 🔐 Role-Based Access Control
 
@@ -70,7 +70,7 @@ MongoDB (can be changed as per use)
 🗂️ Project Structure
 
 ✳️ Frontend
-src/components/ – Reusable UI components (Navbar, Footer, etc.)
+src/components/ – Reusable UI components 
 
 src/pages/ – Route-based page components
 
@@ -85,7 +85,7 @@ buyer/ – Buyer views
 src/config/ – Axios API configuration
 
 ⚙️ Backend
-models/ – Mongoose models (User, Plot, Booking, etc.)
+models/ – Mongoose models 
 
 routes/ – API route handlers
 
@@ -101,14 +101,16 @@ Node.js (v14 or newer)
 
 npm
 
-MongoDB (running locally or using cloud connection string)
+MongoDB 
 
 📥 Installation
 Clone the repository:
 
 
-git clone : [https://github.com/yourusername/plotnest.git](https://github.com/ritesh6569/PLOTNEST)
+git clone : [https://github.com/ritesh6569/PLOTNEST](https://github.com/ritesh6569/PLOTNEST)
+
 cd plotnest
+
 Install dependencies for both client and server:
 
 cd client
