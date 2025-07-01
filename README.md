@@ -49,3 +49,21 @@
 - **MongoDB**: NoSQL database for flexible, scalable data storage (configurable for other databases as needed).
 
 ---
+
+---
+
+## 🏁 Getting Started
+Follow these steps to set up and run PlotNest locally.
+
+### Prerequisites
+Ensure the following are installed:
+- **Node.js** (v16 or higher)
+- **MongoDB** (local or cloud instance, e.g., MongoDB Atlas)
+- **npm** or **yarn** (package managers)
+- A modern web browser
+
+### Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/plotnest.git
+   cd plotnest
