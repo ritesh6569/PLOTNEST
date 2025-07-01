@@ -16,7 +16,7 @@
   - [Running the Application](#running-the-application)
   - [Available Scripts](#available-scripts)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ---
 
