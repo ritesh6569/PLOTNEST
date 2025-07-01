@@ -63,5 +63,5 @@ Ensure the following are installed:
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/plotnest.git
+   https://github.com/ritesh6569/PLOTNEST.git
    cd plotnest
