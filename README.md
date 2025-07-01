@@ -1,4 +1,6 @@
 🏗️ PlotNest – Real Estate Plot Management Platform
+
+
 A full-stack web application for managing real estate plots, users, dealers, and inquiries. PlotNest allows buyers, sellers, and dealers to interact, manage listings, and facilitate deals in the construction and real estate domain.
 
 🔗 Live Demo: https://plotnest.vercel.app
@@ -145,29 +147,6 @@ Command	Description
 npm start	Start Express server (without dev)
 npm run dev	Start server with nodemon (auto-reload)
 
-📁 Folder Structure
-
-plotnest/
-│
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   │   ├── admin/
-│   │   │   ├── dealer/
-│   │   │   ├── seller/
-│   │   │   └── buyer/
-│   │   └── config/
-│   └── public/
-│
-├── server/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   └── uploads/
-│
-└── README.md
-
 🤝 Contributing
 We welcome contributions!
 
@@ -183,5 +162,6 @@ it commit -am 'Add new feature'
 Push to GitHub:
 
 git push origin feature/YourFeature
+
 Open a Pull Request
 
