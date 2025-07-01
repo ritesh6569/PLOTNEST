@@ -20,17 +20,12 @@ Installation
 
 Running the Application
 
-Environment Variables
-
 Scripts
-
-Folder Structure
 
 Contributing
 
-License
+🚀 Features:
 
-🚀 Features
 ✅ User Authentication (Buyers, Sellers, Dealers, Admins)
 
 📋 Plot Listing, Browsing, and Detailed Views
@@ -73,6 +68,7 @@ Database:
 MongoDB (can be changed as per use)
 
 🗂️ Project Structure
+
 ✳️ Frontend
 src/components/ – Reusable UI components (Navbar, Footer, etc.)
 
