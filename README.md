@@ -21,14 +21,25 @@
 ---
 
 ## 🚀 Key Features
-- **User Authentication**: Secure registration and login system supporting buyers, sellers, dealers, and admins with role-based access control.
-- **Plot Management**: Create, browse, and view detailed plot listings with intuitive search and filtering capabilities.
-- **Inquiry & Booking System**: Efficiently manage inquiries and bookings to streamline real estate transactions.
-- **Dealer Matchmaking**: Connect buyers and sellers with trusted dealers to facilitate deal closures.
-- **Admin Dashboard**: Comprehensive tools for administrators to manage users, listings, and platform operations.
-- **Real-Time Chat**: Integrated chat functionality for seamless communication during negotiations.
-- **Responsive Design**: Modern, mobile-friendly UI ensuring a consistent experience across devices.
-- **Secure Access Control**: Role-based permissions to maintain data privacy and system security.
+-  User Authentication: Secure login and registration with role-based access for buyers, sellers, dealers, and admins.
+
+🏡 Plot Management: Create, view, and browse plots with advanced search and filtering options.
+
+📩 Inquiry & Booking System: Instantly book visits and manage inquiries for seamless transactions.
+
+🧑‍💼 Dealer Matchmaking: Assign trusted dealers to plots for handling buyer interactions and deal closure.
+
+📊 Admin Dashboard: Manage users, verify sellers, assign dealers, and track platform activity.
+
+📜 Plot Timeline Tracker: View real-time plot activity including inquiries, visits, and status updates.
+
+✅ Seller Verification Badge: Build trust with admin-approved verified seller indicators.
+
+💬 Real-Time Chat: Communicate instantly between buyers, sellers, and dealers during negotiations.
+
+📱 Responsive Design: Mobile-friendly, modern UI for consistent experience across all devices.
+
+🔐 Secure Access Control: Role-based permissions and protected routes to ensure data privacy.
 
 ---
 
