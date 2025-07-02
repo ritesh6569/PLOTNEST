@@ -21,25 +21,25 @@
 ---
 
 ## 🚀 Key Features
--  User Authentication: Secure login and registration with role-based access for buyers, sellers, dealers, and admins.
+- **User Authentication: Secure login and registration with role-based access for buyers, sellers, dealers, and admins.
 
-🏡 Plot Management: Create, view, and browse plots with advanced search and filtering options.
+- **Plot Management: Create, view, and browse plots with advanced search and filtering options.
 
-📩 Inquiry & Booking System: Instantly book visits and manage inquiries for seamless transactions.
+- **Inquiry & Booking System: Instantly book visits and manage inquiries for seamless transactions.
 
-🧑‍💼 Dealer Matchmaking: Assign trusted dealers to plots for handling buyer interactions and deal closure.
+ - **Dealer Matchmaking: Assign trusted dealers to plots for handling buyer interactions and deal closure.
 
-📊 Admin Dashboard: Manage users, verify sellers, assign dealers, and track platform activity.
+- **Admin Dashboard: Manage users, verify sellers, assign dealers, and track platform activity.
 
-📜 Plot Timeline Tracker: View real-time plot activity including inquiries, visits, and status updates.
+- **Plot Timeline Tracker: View real-time plot activity including inquiries, visits, and status updates.
 
-✅ Seller Verification Badge: Build trust with admin-approved verified seller indicators.
+- **Seller Verification Badge: Build trust with admin-approved verified seller indicators.
 
-💬 Real-Time Chat: Communicate instantly between buyers, sellers, and dealers during negotiations.
+- **Real-Time Chat: Communicate instantly between buyers, sellers, and dealers during negotiations.
 
-📱 Responsive Design: Mobile-friendly, modern UI for consistent experience across all devices.
+- **esponsive Design: Mobile-friendly, modern UI for consistent experience across all devices.
 
-🔐 Secure Access Control: Role-based permissions and protected routes to ensure data privacy.
+- **Secure Access Control: Role-based permissions and protected routes to ensure data privacy.
 
 ---
 
